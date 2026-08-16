@@ -19,10 +19,10 @@ button{margin-top:20px;padding:10px 20px;cursor:pointer;}
 const frame=document.getElementById("frame");
 let index=1;
 const total=21;
-document.getElementById("next").addEventListener("click",()=>{
+setInterval(()=>{
     index=index>=total?1:index+1;
     frame.src=`frames/frame-${String(index).padStart(4,"0")}.jpg`;
-});
+},120);
 </script>
 </body>
 </html>
