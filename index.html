@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Preview</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Adam Frame Test</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-html,body{width:100%;height:100%;overflow:hidden;}
-body{background:#050509;}
-video{width:100%;height:100%;object-fit:contain;display:block;}
+html,body{width:100%;min-height:100%;background:#050509;}
+body{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;}
+img{display:block;max-width:90vw;max-height:80vh;object-fit:contain;}
+button{margin-top:20px;padding:10px 20px;cursor:pointer;}
 </style>
 </head>
 <body>
-<video src="videos/adam-pace-source.mp4" autoplay muted loop playsinline></video>
+<img id="frame" src="frames/frame-0001.jpg" alt="Frame preview">
+<button id="next">Next Frame</button>
+<script>
+const frame=document.getElementById("frame");
+let index=1;
+const total=21;
+document.getElementById("next").addEventListener("click",()=>{
+    index=index>=total?1:index+1;
+    frame.src=`frames/frame-${String(index).padStart(4,"0")}.jpg`;
+});
+</script>
 </body>
 </html>
-
