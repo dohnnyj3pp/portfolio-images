@@ -3,28 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Preview</title>
-
+<title>Video Preview</title>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html,
-body{
-    width:100%;
-    height:100%;
-    overflow:hidden;
-}
-
-body{
-    background:url("explanation.png") center center / contain no-repeat #050509;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;overflow:hidden;}
+body{background:#050509;}
+video{width:100%;height:100%;object-fit:contain;display:block;}
 </style>
-
 </head>
 <body>
+<video src="videos/adam-pace-source.mp4" autoplay muted loop playsinline></video>
 </body>
 </html>
+
