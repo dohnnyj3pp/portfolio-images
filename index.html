@@ -2,27 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Adam Frame Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adam Cutout Test</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-html,body{width:100%;min-height:100%;background:#050509;}
-body{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;}
-img{display:block;max-width:90vw;max-height:80vh;object-fit:contain;}
-button{margin-top:20px;padding:10px 20px;cursor:pointer;}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%}
+body{display:grid;place-items:center;background:radial-gradient(circle at center,#18181f 0%,#050509 65%,#000 100%);overflow:hidden}
+img{display:block;width:min(90vw,540px);height:auto}
 </style>
 </head>
 <body>
-<img id="frame" src="frames/frame-0001.jpg" alt="Frame preview">
-<button id="next">Next Frame</button>
-<script>
-const frame=document.getElementById("frame");
-let index=1;
-const total=21;
-setInterval(()=>{
-    index=index>=total?1:index+1;
-    frame.src=`frames/frame-${String(index).padStart(4,"0")}.jpg`;
-},120);
-</script>
+<img src="eroded-11x11.png" alt="">
 </body>
 </html>
